@@ -8,7 +8,7 @@ const Layout = ({ children }: IChildren) => {
   return (
     <>
       <NavBar />
-      <div>{children}</div>
+      <section>{children}</section>
     </>
   );
 };

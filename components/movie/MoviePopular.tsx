@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface IPopMovie {
   result: {
     adult: false;
@@ -18,7 +20,11 @@ interface IPopMovie {
 }
 
 const MoviePopular = ({ result }: IPopMovie) => {
-  return <li>{result.title}</li>;
+  return (
+    <Link href={`/movie/${result.id}`}>
+      <li>{result.title}</li>
+    </Link>
+  );
 };
 
 export default MoviePopular;

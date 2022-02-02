@@ -8,10 +8,8 @@ const queryClient = new QueryClient();
 const Home: NextPage = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
-        <Seo title='Home' />
-        <Movie />
-      </div>
+      <Seo title='Home' />
+      <Movie />
     </QueryClientProvider>
   );
 };
