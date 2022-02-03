@@ -21,7 +21,7 @@ interface IPopMovie {
 
 const MoviePopular = ({ result }: IPopMovie) => {
   return (
-    <Link href={`/movie/${result.id}`}>
+    <Link href={`/movie/${result.title}/${result.id}`}>
       <li>{result.title}</li>
     </Link>
   );
