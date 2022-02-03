@@ -1,12 +1,22 @@
-export interface IParams {
+import Seo from "../../components/Seo";
+
+interface IParams {
   params: {
     params: string[];
   };
 }
 
-const MovieDetail = ({ params }: any) => {
-  const [title, id] = params as string[];
-  return <div>{title}</div>;
+interface IParam {
+  params: string[];
+}
+
+const MovieDetail = ({ params }: IParam) => {
+  const [title, id] = params;
+  return (
+    <div>
+      <Seo title={title} />
+    </div>
+  );
 };
 
 export const getServerSideProps = async ({ params: { params } }: IParams) => {
